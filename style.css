@@ -1,0 +1,495 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Georgia, serif;
+}
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* HEADER */
+.header {
+    background: #b30000;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* MAIN LAYOUT */
+.container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* CONTENT */
+.content {
+    flex: 3;
+    background: #f4f4f4;
+    padding: 20px;
+}
+
+/* SIDEBAR */
+.sidebar {
+    flex: 1;
+    background: #ddd;
+    padding: 20px;
+}
+
+/* FOOTER */
+.footer {
+    background: #000;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+@media (max-width: 768px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .hero {
+        padding: 20px;
+    }
+
+    .hero h1 {
+        font-size: 1.6rem;
+    }
+
+    .twilight-title {
+        font-size: 2.2rem;
+        letter-spacing: 2px;
+        line-height: 1.2;
+    }
+
+    .sparkle {
+        font-size: 0.95rem;
+        letter-spacing: 2px;
+        margin-top: 10px;
+    }
+
+    .shop-btn {
+        padding: 12px 28px;
+        font-size: 0.85rem;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .twilight-title span {
+        animation-duration: 0.4s;
+    }
+
+    .sparkle {
+        animation-duration: 3s;
+    }
+}
+.icon-nav {
+    position: fixed;
+    top: 25%;
+    right: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    z-index: 1000;
+}
+
+.icon-nav a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    opacity: 0.75;
+    transition: all 0.4s ease;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+}
+@media (max-width: 768px) {
+    .icon-nav {
+        right: 12px;
+        top: 30%;
+    }
+
+    .icon-nav a {
+        font-size: 18px;
+    }
+}
+
+.icon-nav a:hover {
+    opacity: 1;
+    transform: scale(1.2);
+    text-shadow:
+        0 0 10px rgba(255,255,255,0.9),
+        0 0 20px rgba(255,255,255,0.8),
+        0 0 35px rgba(180, 0, 0, 0.8);
+}
+
+
+
+/* Hero section */
+.hero {
+    height: 100vh;
+    background-image: 
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+        url("dc9cda9b3e28f3f3d9fe5ddccf51db2c.jpg");
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Title */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;   /* THIS stacks them */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Welcome to */
+.hero h1 {
+    font-style: italic;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    color: #f0f0f0;
+}
+
+/* Main title */
+.hero h2 {
+    color: black;
+    font-weight: bold;
+    font-size: 3.2rem;
+    margin-bottom: 10px;
+}
+
+/* Subtitle */
+.hero h3 {
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    color: #dcdcdc;
+}
+.shop-btn {
+    margin-top: 30px;
+    padding: 14px 40px;
+    background-color: #4b0000;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border-radius: 4px;
+    box-shadow: 0 0 20px rgba(120, 0, 0, 0.8);
+    transition: all 0.4s ease;
+}
+
+.shop-btn:hover {
+    background-color: #700000;
+    transform: scale(1.05);
+    box-shadow: 0 0 35px rgba(200, 0, 0, 1);
+}
+
+
+.twilight-title {
+    font-size: 3.2rem;
+    font-weight: bold;
+    color: #111;
+    letter-spacing: 4px;
+    overflow: hidden;
+}
+
+.twilight-title span {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: reveal 0.6s forwards;
+}
+
+@keyframes reveal {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.sparkle {
+    font-size: 1.1rem;
+    letter-spacing: 3px;
+    color: #f2f2f2;
+    animation: sparkle 2.5s infinite alternate;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+}
+
+@keyframes sparkle {
+    0% {
+        opacity: 0.6;
+        text-shadow: 0 0 5px rgba(255,255,255,0.4);
+    }
+    100% {
+        opacity: 1;
+        text-shadow: 
+            0 0 12px rgba(255,255,255,0.9),
+            0 0 25px rgba(180, 0, 0, 0.8);
+    }
+}
+
+.info-section {
+    min-height: 100vh;
+    background-color: #0b0b16;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 60px;
+    gap: 40px;
+}
+
+.info-text {
+    flex: 1;
+}
+
+.info-text h1,
+.info-text h2 {
+    color: #cda1a1;
+}
+
+.info-text p,
+.info-text li {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.info-text ul {
+    margin-top: 15px;
+    list-style: none;
+    padding-left: 0;
+}
+
+.info-text li::before {
+    content: "• ";
+    color: #dbc4c4;
+}
+
+.info-image {
+    flex: 1;
+    text-align: center;
+}
+
+.info-image img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+/* Styles for Go Back button */
+.back-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4b2e83;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    /* Position at bottom center */
+    display: block;
+    margin: 40px auto 20px auto; /* top margin 40px, bottom 20px, centered horizontally */
+}
+
+.back-btn:hover {
+    background-color: #3a2266;
+}
+.see-more-btn {
+    display: block;
+    width: 150px;
+    text-align: center;
+    margin: 40px auto 20px auto; /* below Go Back button */
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ff4b6e;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.see-more-btn:hover {
+    background-color: #e03b5a;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    margin-bottom: 30px;
+}
+
+/* Align all 5 books horizontally */
+.catalogue {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 60px 40px;
+    flex-wrap: nowrap;
+}
+
+.book {
+    width: 220px;
+    background: rgba(255,255,255,0.95);
+    padding: 18px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+    transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
+
+
+.book img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.6s ease;
+}
+.book:hover {
+    transform: translateY(-12px) scale(1.05);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.45);
+}
+
+.book:hover img {
+    transform: scale(1.08);
+}
+
+.title {
+    font-weight: bold;
+    margin-top: 14px;
+    color: #2b0000;
+    letter-spacing: 1px;
+}
+
+.year {
+    color: #555;
+    font-size: 14px;
+}
+
+.cute-message {
+    margin-top: 20px;
+    font-size: 16px;
+    color: white;
+    font-style: italic;
+}
+
+.button-container {
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+}
+
+.back-button {
+    padding: 12px 25px;
+    background-color: #222;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.back-button:hover {
+    background-color: #444;
+}
+html, body {
+    min-height: 100%;
+}
+
+body {
+    background: linear-gradient(to bottom, #dcd5d5, #b30000);
+    background-attachment: fixed;
+}
+
+.view-cart-btn {
+    margin-top: 10px;
+    background: #ffffff;
+    border: 1px solid #ddd;
+    padding: 8px 14px;
+    border-radius: 10px;
+    font-size: 13px;
+    cursor: pointer;
+}
+@media (max-width: 768px) {
+    .catalogue {
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding: 30px;
+    }
+
+    .book {
+        min-width: 200px;
+    }
+}
+/* Make layout flexible */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding-bottom: 80px; /* space for bottom tab */
+}
+
+/* Prevent horizontal scrolling */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Images adapt automatically */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Buttons touch-friendly */
+button, .checkout-btn, .home-btn {
+    min-height: 44px;
+    font-size: 16px;
+}@media (max-width: 768px) {
+
+    /* Stack everything nicely */
+    .cart-summary,
+    .checkout-container,
+    .thankyou-container {
+        width: 95%;
+        margin: 20px auto;
+        padding: 20px;
+    }
+
+    /* Inputs easier to type */
+    input, select, textarea {
+        font-size: 16px;
+    }
+
+    /* Bottom tab text smaller */
+    .bottom-tab .tab-item {
+        font-size: 12px;
+    }
+}
+.bottom-tab {
+    padding-bottom: env(safe-area-inset-bottom);
+}
+
